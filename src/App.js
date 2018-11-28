@@ -1,28 +1,44 @@
 import React, { Component } from 'react';
+import Header from './Components/Header/Header';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    user: {
+      name: '',
+      role: ''
+    }
+  }
+
+  famousPeople = (propertyName)=>{
+    console.log('this is famousPeolpe');
+    return (event)=>{
+      console.log('this is event handler');
+      this.setState({
+        user:{
+          ...this.state.user,
+          [propertyName] : event.target.value
+        }
+      })
+
+    }
+  }
+
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+      <Header />
+      <input type='text' onChange={this.famousPeople('name')} />
+      <input type='text' onChange={this.famousPeople('role')} />
+      <button onClick={this.handleClick}>Add</button>
       </div>
     );
   }
-}
+  }
+  
 
 export default App;

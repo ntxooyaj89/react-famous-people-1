@@ -42,7 +42,7 @@ class App extends Component {
       <input type='text' onChange={this.famousPeople('name')} />
       <input type='text' onChange={this.famousPeople('role')} />
       <button onClick={this.handleClick}>Add</button>
-      <p> Name of famous person: {this.state.user.name} thier role: {this.state.user.role}</p>
+      <p>{this.state.user.name} is famous for {this.state.user.role}</p>
       </div>
       
 

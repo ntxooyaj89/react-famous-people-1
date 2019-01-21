@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Header from './Components/Header/Header';
 //import famousPeolpe from './Components/famousPerson/FamousPerson';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
 
+  // state takes in an object (can be name anything) 
   state = {
     user: {
       name: '',
@@ -36,13 +36,16 @@ class App extends Component {
   render() {
     return (
       <div>
+      <header className="App-header">
       <Header />
+      </header>
       
       
       <input type='text' onChange={this.famousPeople('name')} />
       <input type='text' onChange={this.famousPeople('role')} />
       <button onClick={this.handleClick}>Add</button>
       <p>{this.state.user.name} is famous for {this.state.user.role}</p>
+      
       </div>
       
 

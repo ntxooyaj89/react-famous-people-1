@@ -8,6 +8,8 @@
 //         role: ''
 //       }
 //     }
+// }
+
   
 //     famousPeople = (propertyName)=>{
 //       console.log('this is famousPeolpe');
@@ -18,17 +20,26 @@
 //             ...this.state.user,
 //             [propertyName] : event.target.value
 //           }
-//         })
+//         });
   
 //       }
 //     }
-// }
 
-// // {/* <div>
-// // <input type='text' onChange={this.famousPeople('name')} />
-// // <input type='text' onChange={this.famousPeople('role')} />
-// // <button onClick={this.handleClick}>Add</button>
-// // <p> Name of famous person: {this.state.user.name} thier role: {this.state.user.role}</p>
-// // </div> */}
+
+
+// render() {
+
+//     console.log('this is famousPeole render');
+//     return(
+// <div>
+// <input type='text' onChange={this.famousPeople('name')} />
+// <input type='text' onChange={this.famousPeople('role')} />
+// <button onClick={this.handleClick}>Add</button>
+// <p> Name of famous person: {this.state.user.name} thier role: {this.state.user.role}</p>
+// </div>
+//     );
+     
+
+// }
 
 // export default famousPeolpe;
